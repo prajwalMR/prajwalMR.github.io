@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<!-- ==============================
+    Project:        Metronic "Aircv" Frontend Freebie - Responsive HTML Template Based On Twitter Bootstrap 3.3.4
+    Version:        1.0
+    Author:         KeenThemes
+    Primary use:    Corporate, Business Themes.
+    Email:          support@keenthemes.com
+    Follow:         http://www.twitter.com/keenthemes
+    Like:           http://www.facebook.com/keenthemes
+    Website:        http://www.keenthemes.com
+    Premium:        Premium Metronic Admin Theme: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
+================================== -->
+<html lang="en" class="no-js">
+    <!-- BEGIN HEAD -->
+    <head>
+        <meta charset="utf-8"/>
+        <title>Prajwal M R</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta content="" name="description"/>
+        <meta content="" name="author"/>
+
+        <!-- GLOBAL MANDATORY STYLES -->
+        <link href="http://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet" type="text/css">
+        <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css"/>
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+        <!-- PAGE LEVEL PLUGIN STYLES -->
+        <link href="css/animate.css" rel="stylesheet">
+
+        <!-- THEME STYLES -->
+        <link href="css/layout.css" rel="stylesheet" type="text/css"/>
+        <link href="css/layout.min.css" rel="stylesheet" type="text/css"/>
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="favicon.ico"/>
+    </head>
+    <!-- END HEAD -->
+
+    <style type="text/css">
+        body {  
+  margin: 0;
+  padding: 0;
+  background: rgb(230,230,230);
+  
+  color: rgb(50,50,50);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 112.5%;
+  line-height: 1.6em;
+}
+
+/* ================ The Timeline ================ */
+
+.timeline {
+  position: relative;
+  width: 660px;
+  margin: 0 auto;
+  margin-top: 20px;
+  padding: 1em 0;
+  list-style-type: none;
+}
+
+.timeline:before {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  content: ' ';
+  display: block;
+  width: 6px;
+  height: 100%;
+  margin-left: -3px;
+  background: rgb(80,80,80);
+  background: -moz-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,1)));
+  background: -webkit-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  background: -o-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  background: -ms-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  background: linear-gradient(to bottom, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  
+  z-index: 5;
+}
+
+.timeline li {
+  padding: 1em 0;
+}
+
+.timeline li:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.direction-l {
+  position: relative;
+  width: 300px;
+  float: left;
+  text-align: right;
+}
+
+.direction-r {
+  position: relative;
+  width: 300px;
+  float: right;
+}
+
+.flag-wrapper {
+  position: relative;
+  display: inline-block;
+  
+  text-align: center;
+}
+
+.flag {
+  position: relative;
+  display: inline;
+  background: #4e67f4;
+  padding: 6px 10px;
+  border-radius: 5px;
+  
+  font-weight: 600;
+  text-align: left;
+}
+
+.direction-l .flag {
+  -webkit-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  -moz-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+}
+
+.direction-r .flag {
+  -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+}
+
+.direction-l .flag:before,
+.direction-r .flag:before {
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  content: ' ';
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin-top: -10px;
+  background: #fff;
+  border-radius: 10px;
+  border: 4px solid rgb(255,80,80);
+  z-index: 10;
+}
+
+.direction-r .flag:before {
+  left: -40px;
+}
+
+.direction-l .flag:after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  height: 0;
+  width: 0;
+  margin-top: -8px;
+  border: solid transparent;
+  border-left-color: rgb(248,248,248);
+  border-width: 8px;
+  pointer-events: none;
+}
+
+.direction-r .flag:after {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  height: 0;
+  width: 0;
+  margin-top: -8px;
+  border: solid transparent;
+  border-right-color: rgb(248,248,248);
+  border-width: 8px;
+  pointer-events: none;
+}
+
+.time-wrapper {
+  display: inline;
+  
+  line-height: 1em;
+  font-size: 0.66666em;
+  color: rgb(0 ,0 ,0);
+  vertical-align: middle;
+}
+
+.direction-l .time-wrapper {
+  float: left;
+}
+
+.direction-r .time-wrapper {
+  float: right;
+}
+
+.time {
+  display: inline-block;
+  padding: 4px 6px;
+  background: rgb(248,248,248);
+}
+
+.desc {
+  margin: 1em 0.75em 0 0;
+  
+  font-size: 0.77777em;
+  font-style: italic;
+  line-height: 1.5em;
+}
+
+.direction-r .desc {
+  margin: 1em 0 0 0.75em;
+}
+
+/* ================ Timeline Media Queries ================ */
+
+@media screen and (max-width: 660px) {
+
+.timeline {
+    width: 100%;
+    padding: 4em 0 1em 0;
+}
+
+.timeline li {
+    padding: 2em 0;
+}
+
+.direction-l,
+.direction-r {
+    float: none;
+    width: 100%;
+
+    text-align: center;
+}
+
+.flag-wrapper {
+    text-align: center;
+}
+
+.flag {
+    background: rgb(255,255,255);
+    z-index: 15;
+}
+
+.direction-l .flag:before,
+.direction-r .flag:before {
+  position: absolute;
+  top: -30px;
+    left: 50%;
+    content: ' ';
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin-left: -9px;
+    background: #fff;
+    border-radius: 10px;
+    border: 4px solid rgb(255,80,80);
+    z-index: 10;
+}
+
+.direction-l .flag:after,
+.direction-r .flag:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -8px;
+    height: 0;
+    width: 0;
+    margin-left: -8px;
+    border: solid transparent;
+    border-bottom-color: rgb(255,255,255);
+    border-width: 8px;
+    pointer-events: none;
+}
+
+.time-wrapper {
+    display: block;
+    position: relative;
+    margin: 4px 0 0 0;
+    z-index: 14;
+}
+
+.direction-l .time-wrapper {
+    float: none;
+}
+
+.direction-r .time-wrapper {
+    float: none;
+}
+
+.desc {
+    position: relative;
+    margin: 1em 0 0 0;
+    padding: 1em;
+    background: rgb(245,245,245);
+    -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
+    -moz-box-shadow: 0 0 1px rgba(0,0,0,0.20);
+    box-shadow: 0 0 1px rgba(0,0,0,0.20);
+    
+  z-index: 15;
+}
+
+.direction-l .desc,
+.direction-r .desc {
+    position: relative;
+    margin: 1em 1em 0 1em;
+    padding: 1em;
+    
+  z-index: 15;
+}
+
+}
+
+@media screen and (min-width: 400px ?? max-width: 660px) {
+
+.direction-l .desc,
+.direction-r .desc {
+    margin: 1em 4em 0 4em;
+}
+
+}
+    </style>
+
+    <!-- BODY -->
+    <body id="body" data-spy="scroll" data-target=".header">
+
+        <!--========== HEADER ==========-->
+        <header class="header navbar-fixed-top">
+            <!-- Navbar -->
+            <nav class="navbar" role="navigation">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="menu-container js_nav-item">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="toggle-icon"></span>
+                        </button>
+
+                        <!-- Logo -->
+                        <div class="logo">
+                            <a class="logo-wrap" href="#body">
+<!--                                 <img class="logo-img logo-img-main" src="img/logo.png" alt="Asentus Logo">
+                                <img class="logo-img logo-img-active" src="img/logo-dark.png" alt="Asentus Logo"> -->
+                                <h3 class="logo-img logo-img-main" style= "color : white">MyProfile</h3>
+                                <h3 class="logo-img logo-img-active" >MyProfile</h3>
+                            </a>
+                        </div>
+                        <!-- End Logo -->
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse nav-collapse">
+                        <div class="menu-container">
+                            <ul class="nav navbar-nav navbar-nav-right">
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#body">Home</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#about">About</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#experience">Projects</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#work">Work Experience</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#timeline">Timeline</a></li>
+                                <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover" href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End Navbar Collapse -->
+                </div>
+            </nav>
+            <!-- Navbar -->
+        </header>
+        <!--========== END HEADER ==========-->
+
+        <!--========== SLIDER ==========-->
+        <div class="promo-block parallax-window" data-parallax="scroll" data-image-src="img/1920x1080/powerBG.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="promo-block-divider">
+                            <h1 class="promo-block-title">Prajwal  M R</h1>
+                            <p class="promo-block-text">Fullstack Developer &amp; ML enthusiast</p>
+
+                        </div>
+
+                        <ul class="list-inline">
+                            <li><a href="https://www.facebook.com/prajwal.ramesh.9" target="_blank" class="social-icons"><i class="icon-social-facebook"></i></a></li>
+                            <li><a href="http://github.com/prajwalMR" target="_blank" class="social-icons"><i class="icon-social-github"></i></a></li>
+                            <li><a href="http://www.linkedin.com/in/prajwamr" target="_blank" class="social-icons"><i class="icon-social-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!--// end row -->
+            </div>
+        </div>
+        <!--========== SLIDER ==========-->
+
+        <!--========== PAGE LAYOUT ==========-->
+        <!-- About -->
+        <div id="about">
+            <div class="container content-lg">
+                <div class="row">
+                    <div class="col-sm-3 sm-margin-b-30">
+
+                        <div class="text-right sm-text-left">
+                            <h2 class="margin-b-0">Intro</h2>
+                            <p>What I am all about.</p>
+                            <img src="img/1920x1080/prajwal.jpeg" >
+                        </div>
+
+                    </div>
+                    <div class="col-sm-8 col-sm-offset-1">
+                        <div class="margin-b-60">
+                            <p ></b>I'm Prajwal . I am doing my engineering in Computer science at PESIT. I am a Fullstack developer. My intersets also include AI , Game developement , ML.</b></p>
+                            <p></b>I love building applications and solving hard problems which impact others lives. I love to participate and hackathons and meet new people.</b></p>
+                        </div>
+
+                        <h3>My Techinical skills </h3>
+                        <p>Jack of many , Master of a few</p>
+
+                        <!-- Progress Box -->
+                        <div class="progress-box">
+                            <h5>Java<span class="color-heading pull-right">90%</span></h5>
+                            <div class="progress">
+                                <div class="progress-bar bg-color-base" role="progressbar" data-width="90"></div>
+                            </div>
+                        </div>
+                        <div class="progress-box">
+                            <h5>JavaScript <span class="color-heading pull-right">85%</span></h5>
+                            <div class="progress">
+                                <div class="progress-bar bg-color-base" role="progressbar" data-width="85"></div>
+                            </div>
+                        </div>
+                        <div class="progress-box">
+                            <h5>c++ <span class="color-heading pull-right">75%</span></h5>
+                            <div class="progress">
+                                <div class="progress-bar bg-color-base" role="progressbar" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="progress-box">
+                            <h5>Python <span class="color-heading pull-right">70%</span></h5>
+                            <div class="progress">
+                                <div class="progress-bar bg-color-base" role="progressbar" data-width="70"></div>
+                            </div>
+                        </div>
+                        <div class="progress-box">
+                            <h5>NodeJS <span class="color-heading pull-right">80%</span></h5>
+                            <div class="progress">
+                                <div class="progress-bar bg-color-base" role="progressbar" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="progress-box">
+                            <h5>AngularJS <span class="color-heading pull-right">70%</span></h5>
+                            <div class="progress">
+                                <div class="progress-bar bg-color-base" role="progressbar" data-width="70"></div>
+                            </div>
+                        </div>
+                        <div class="progress-box">
+                            <h5>SQL<span class="color-heading pull-right">80%</span></h5>
+                            <div class="progress">
+                                <div class="progress-bar bg-color-base" role="progressbar" data-width="80"></div>
+                            </div>
+                        </div>
+                        <div class="progress-box">
+                            <h5>MongoDB<span class="color-heading pull-right">75%</span></h5>
+                            <div class="progress">
+                                <div class="progress-bar bg-color-base" role="progressbar" data-width="75"></div>
+                            </div>
+                        </div>
+                        <div class="progress-box">
+                            <h5>Cassandra<span class="color-heading pull-right">75%</span></h5>
+                            <div class="progress">
+                                <div class="progress-bar bg-color-base" role="progressbar" data-width="65"></div>
+                            </div>
+                        </div>
+                        <div class="progress-box">
+                            <h5>Hadoop<span class="color-heading pull-right">50%</span></h5>
+                            <div class="progress">
+                                <div class="progress-bar bg-color-base" role="progressbar" data-width="50"></div>
+                            </div>
+                        </div>
+                        <!-- End Progress Box -->
+                    </div>
+                </div>
+                <!--// end row -->
+            </div>
+        </div>
+        <!-- End About -->
+
+        <!-- Experience -->
+        <div id="experience">
+            <div class="bg-color-sky-light" data-auto-height="true">
+                <div class="container content-lg">
+                    <div class="row">
+                        <div class="col-sm-3 sm-margin-b-30">
+                            <div class="text-right sm-text-left">
+                                <h2 class="margin-b-0">My Projects</h2>
+                                <p>I love doing fun weekend projects <br> (Click on them to view source code)</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-8 col-sm-offset-1">
+                            <div class="row row-space-2 margin-b-4">
+
+                                <div class="col-md-4 md-margin-b-4">
+                                    <div class="service" data-height="height">
+                                        <div class="service-element">
+                                            <i class="service-icon icon-game-controller"></i>
+                                        </div>
+                                        <div class="service-info">
+                                            <h3>Web based Games</h3>
+                                            <p class="margin-b-5">Its a simple clone of packman game and a simple drag and drop game to teach kids about different shapes.</p>
+                                        
+                                              <h5>Technologies used : </h5>
+                                                <p>JavaScript | HTML | CSS</p>
+                                        
+                                        </div>
+                                        <a href="https://github.com/prajwalMR/Browser-games" target="_blank" class="content-wrapper-link"></a>    
+
+                                    </div>
+                                </div>
+                                <div class="col-md-4 md-margin-b-4">
+                                    <div class="service bg-color-base wow zoomIn" data-height="height" data-wow-duration=".3" data-wow-delay=".1s">
+                                        <div class="service-element">
+                                            <i class="service-icon color-white icon-graph"></i>
+                                        </div>
+                                        <div class="service-info color-white">
+                                            <h3 class="color-white">Sentiment analysis of twitter data</h3>
+                                            <p class="color-white margin-b-5">I have developed my own simple formula to calculate the sentiment behind a statement . Given a topic , It fetches tweets related to it and gives a report on the overall sentiment of the people reagrding the topic. </p>
+                                              <h5 class="color-white">Technologies used : </h5>
+                                                <p class=" color-white">Java | Python </p>
+                                        </div>
+                                        <a href="https://github.com/prajwalMR/Sentiment-Analysis-Of-Twitter-Data" target="_blank" class="content-wrapper-link"></a>    
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="service" data-height="height">
+                                        <div class="service-element">
+                                            <i class="service-icon icon-social-dribbble"></i>
+                                        </div>
+                                        <div class="service-info">
+                                            <h3>Cricket Match Simulator</h3>
+                                            <p class="margin-b-5">Given the list of players in each team , This simulates the match between the two teams ball by ball and predicts the final score and hence the result of the match.</p>
+                                            <h5 >Technologies used : </h5>
+                                                <p >Java | Hadoop | python </p>
+                                        </div>
+                                        <a href="https://github.com/prajwalMR/IPL_Cricket_Match_Simulation" target="_blank" class="content-wrapper-link"></a>    
+                                    </div>
+                                </div>
+                                <div class="col-md-4 md-margin-b-4" st>
+                                    <div class="service bg-color-darkbase wow zoomIn" data-height="height" data-wow-duration=".3" data-wow-delay=".1s">
+                                        <div class="service-element">
+                                            <i class="service-icon color-white icon-screen-tablet"></i>
+                                        </div>
+                                        <div class="service-info">
+                                            <h3 class="color-white">LoadBalancer and autoscaling for PaaS</h3>
+                                            <p class="color-white margin-b-5">Its a loadBalancing and auto-scaling service for PaaS backends. It launches new containers when load increases and uses Round-robin algorithm to load-balance</p>
+                                            <h5 class="color-white">Technologies used : </h5>
+                                                <p class=" color-white">NodeJS | Docker </p>
+                                        </div>
+                                        <a href="https://github.com/prajwalMR/PaasWithAutoScalingAndLoadBalancing" target = "_blank" class="content-wrapper-link"></a>    
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="service" data-height="height">
+                                        <div class="service-element">
+                                            <i class="service-icon icon-badge"></i>
+                                        </div>
+                                        <div class="service-info">
+                                            <h3>Social Network for group projects</h3>
+                                            <p class="margin-b-5">Its a social network for easy and instant sharing of links and files and instant chat among a group.This works like a DropBox with chat integrated. The main purpuse of this is to make developement of group projects fast and easy among the members of the group.</p>
+                                            <h5 >Technologies used : </h5>
+                                                <p>NodeJS | AngularJS  </p>
+                                        </div>
+                                        <a href="https://github.com/prajwalMR/chat-and-realtime-file-sharing-application" target="_blank" class="content-wrapper-link"></a>    
+                                    </div>
+                                </div>
+                                <div class="col-md-4 md-margin-b-4">
+                                    <div class="service bg-color-darkbase wow zoomIn" data-height="height" data-wow-duration=".3" data-wow-delay=".1s">
+                                        <div class="service-element">
+                                            <i class="service-icon color-white icon-screen-tablet"></i>
+                                        </div>
+                                        <div class="service-info">
+                                            <h3 class="color-white">Textile Fabric Recognition using computer vision and Machine learning</h3>
+                                            <p class="color-white margin-b-5">A simple Machine learning project , where given an image of a fabric , It predicts if the fabric is a cotton or a silk cloth </p>
+                                            <h5 class="color-white">Technologies used : </h5>
+                                                <p class=" color-white">Python | OpenCV | MatPlotLib | ScikitLearn </p>
+                                        </div>
+                                        <a href="https://github.com/prajwalMR/Fabric-Recognition-using-SVM-and-OpenCV" target="_blank" class="content-wrapper-link"></a>    
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="service" data-height="height">
+                                        <div class="service-element">
+                                            <i class="service-icon icon-badge"></i>
+                                        </div>
+                                        <div class="service-info">
+                                            <h3>E-commerce Product Search service</h3>
+                                            <p class="margin-b-5">It's a simple E commerce Product Search service , Which takes in the user requirements and recommends all the suitable products available for them</p>
+                                            <h5 >Technologies used : </h5>
+                                                <p >PHP | Javascript | MySQL </p>
+                                        </div>
+                                        <a href="https://github.com/prajwalMR/E-commerce-Recommendation-system" target="_blank" class="content-wrapper-link"></a>    
+                                    </div>
+                                </div>
+                                <div class="col-md-4 md-margin-b-4">
+                                    <div class="service bg-color-base wow zoomIn" data-height="height" data-wow-duration=".3" data-wow-delay=".1s">
+                                        <div class="service-element">
+                                            <i class="service-icon color-white icon-screen-tablet"></i>
+                                        </div>
+                                        <div class="service-info">
+                                            <h3 class="color-white">Automated bug assignment system</h3>
+                                            <p class="color-white margin-b-5">Developed an simple automated system to help in assigning  software bugs to right developers in an orginisation</p>
+                                            <h5 class="color-white">Technologies used : </h5>
+                                                <p class=" color-white">Python</p>
+                                        </div>
+                                        <a class="content-wrapper-link"></a>    
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="service" data-height="height">
+                                        <div class="service-element">
+                                            <i class="service-icon icon-badge"></i>
+                                        </div>
+                                        <div class="service-info">
+                                            <h3>Infinite runner 2D desktop game</h3>
+                                            <p class="margin-b-5">Its a infinite runner game similar to the game that comes on google chrome. Run to get points. Jump over the fire . Escape from bats</p>
+                                            <h5 >Technologies used : </h5>
+                                                <p >Python | Pygame </p>
+                                        </div>
+                                        <a href="https://github.com/prajwalMR/infinite_Runner_2DGame " target="_blank" class="content-wrapper-link"></a>    
+                                    </div>
+                                </div>
+                                <div class="col-md-4 md-margin-b-4">
+                                    <div class="service bg-color-darkbase wow zoomIn" data-height="height" data-wow-duration=".3" data-wow-delay=".1s">
+                                        <div class="service-element">
+                                            <i class="service-icon color-white icon-screen-tablet"></i>
+                                        </div>
+                                        <div class="service-info">
+                                            <h3 class="color-white">Implementation of Web Cache</h3>
+                                            <p class="color-white margin-b-5">This is a simple project which implements a web cache using file system. This is mainly written in python. </p>
+                                        </div>
+                                        <a href="https://github.com/prajwalMR/Web_Cache_Implementation" target="_blank" class="content-wrapper-link"></a>    
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="service" data-height="height">
+                                        <div class="service-element">
+                                            <i class="service-icon icon-badge"></i>
+                                        </div>
+                                        <div class="service-info">
+                                            <h3>Implementation of TCP slow start</h3>
+                                            <p class="margin-b-5">Simple project implementing TCP slow start , written in python</p>
+                                        </div>
+                                        <a href="https://github.com/prajwalMR/TCP_Slow_Start_Implementation" target="_blank" class="content-wrapper-link"></a>    
+                                    </div>
+                                </div>
+                                <div class="col-md-4 md-margin-b-4">
+                                    <div class="service bg-color-darkbase wow zoomIn" data-height="height" data-wow-duration=".3" data-wow-delay=".1s">
+                                        <div class="service-element">
+                                            <i class="service-icon color-white icon-screen-tablet"></i>
+                                        </div>
+
+                                        <div class="service-info">
+                                            <h3 class="color-white">Peer to Peer book sharing website (BETA)</h3>
+                                            <p class="color-white margin-b-5">It's a website for people to buy , sell , Exchange books among each other. Main purpouse is to enable Exchange of books among students</p>
+                                            <h5 class="color-white">Technologies used : </h5>
+                                                <p class=" color-white">NodeJS | AngularJS | MongoDB | AWS cloud hosting | Heroku </p>
+                                        </div>
+                                        <a  class="content-wrapper-link"></a>    
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <!--// end row -->
+                        </div>
+                    </div>
+                    <!--// end row -->
+                </div>
+            </div>
+        </div>
+        <!-- End Experience -->
+
+        <!-- Work Experience -->
+
+
+                <div id="work">
+            <div class="container content-lg">
+                <div class="row">
+                    <div class="col-sm-3 sm-margin-b-30">
+
+                        <div class="text-right sm-text-left">
+                            <h2 class="margin-b-0">Work Experience</h2>
+                            <p>I build the real value.</p>
+                          
+                        </div>
+
+                    </div>
+                    <div class="col-sm-8 col-sm-offset-1">
+
+
+                        <h3>Internships</h3>
+
+                        <!-- Progress Box -->
+
+                        <div >
+                              <div class="w3-card-4 color-white bg-color-white" style="width:60%;">
+                                <header class=" color-white bg-color-base">
+                                  <h4 class=" color-white" >Intern at Happy Trip India , Bangalore | Semester project </h4>
+                                </header>
+                                <div class="w3-container bg-color-white " >
+                                  <p>Worked on a chat feature for a social network website.</p>
+                                </div>
+
+                              </div>
+                        </div>
+
+                           <br><br>
+                        <div >
+                              <div class="w3-card-4 color-white bg-color-white" style="width:60%;">
+                                <header class=" color-white bg-color-darkbase">
+                                  <h4 class=" color-white" >Software Developer Intern at EFI inc. Bangalore | June - August 2016</h4>
+                                </header>
+
+
+                                <div class="w3-container bg-color-white " >
+                                  <p>Developed multiple features of a Remote Diagnostics Web application</p>
+                                </div>
+
+                              </div>
+                        </div>
+                        <br><br>
+                        <div >
+                              <div class="w3-card-4 color-white bg-color-white" style="width:60%;">
+                                <header class=" color-white bg-color-base">
+                                  <h4 class=" color-white" >Software Developer Intern at EFI inc. Bangalore | May - Present 2017</h4>
+                                </header>
+
+
+                                <div class="w3-container bg-color-white " >
+                                  <p>Working on Build and release workflow automation system</p>
+                                </div>
+
+                              </div>
+                        </div>
+
+
+                        </div>
+                        
+                        <!-- End Progress Box -->
+                    </div>
+                </div>
+                <!--// end row -->
+            </div>
+        </div>
+
+        <div id="hackathon">
+            <div class="container content-lg bg-color-white">
+                <div class="row">
+                    <div class="col-sm-3 sm-margin-b-30">
+
+                        <div class="text-right sm-text-left">
+                            <h2 class="margin-b-0">Hackathon</h2>
+                            <p>I love to get my hands dirty.</p>
+                          
+                        </div>
+
+                    </div>
+                    <div class="col-sm-8 col-sm-offset-1">
+
+                        <!-- Progress Box -->
+
+                        <div >
+                              <div class="w3-card-4 color-white bg-color-white" style="width:60%;">
+                                <header class=" color-white bg-color-darkbase">
+                                  <h4 class=" color-white" >1st Place in Honeywell TechChalenge Hackathon , 2016</h4>
+                                </header>
+                                <div class="w3-container bg-color-white " >
+                                  <p>Developed an app to locate your colleague within the office premises in an open seating environment , where employees can sit anywhere in the office.</p>
+                                </div>
+
+                              </div>
+                        </div>
+
+                        </div>
+                        
+                        <!-- End Progress Box -->
+                    </div>
+                </div>
+                <!--// end row -->
+            </div>
+        <!-- End Work Experience -->
+
+        <!-- Timeline -->
+        <div id="timeline">
+            <div class="container content-lg ">
+                <div class="row">
+                    <div class="col-sm-3 sm-margin-b-30">
+                        <div class="text-right sm-text-left">
+                            <h2 class="margin-b-0">Timeline</h2>
+                            <p>The whole journey in a glimps.</p>
+                        </div>
+                    </div>
+
+                    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+  
+<!-- The Timeline -->
+
+<ul class="timeline ">
+
+            <li>
+        <div class="direction-r">
+            <div class="flag-wrapper">
+                <span class="flag color-white">Software Inter , EFI</span>
+                <span class="time-wrapper"><span class="time">2017 may - present</span></span>
+            </div>
+            <div class="desc">My current Internship.</div>
+        </div>
+    </li>
+
+        <li>
+        <div class="direction-l">
+            <div class="flag-wrapper">
+                <span class="flag color-white">1st place HoneyWell Hackathon</span>
+                <span class="time-wrapper"><span class="time">2016</span></span>
+            </div>
+            <div class="desc">Built an App to locate your colleagues within the office , in an open seating environment</div>
+        </div>
+    </li>
+    <!-- Item 1 -->
+    <li>
+        <div class="direction-r">
+            <div class="flag-wrapper">
+                <span class="flag color-white">Software Intern , EFI</span>
+                <span class="time-wrapper"><span class="time">2016 Jun- Aug</span></span>
+            </div>
+            <div class="desc">My current employment. Way better than the position before!</div>
+        </div>
+    </li>
+  
+    <!-- Item 2 -->
+    <li>
+        <div class="direction-l">
+            <div class="flag-wrapper">
+                <span class="flag color-white">Happy trip India</span>
+                <span class="time-wrapper"><span class="time">2015</span></span>
+            </div>
+            <div class="desc">Intern for semester project</div>
+        </div>
+    </li>
+
+    <!-- Item 3 -->
+    <li>
+        <div class="direction-r">
+            <div class="flag-wrapper">
+                <span class="flag color-white">PES Institute of Technology</span>
+                <span class="time-wrapper"><span class="time">2014-Present</span></span>
+            </div>
+            <div class="desc">Pursuing Bachelor's Degree in Information Science and Engineering</div>
+        </div>
+    </li>
+  
+</ul>
+
+                </div>
+                <!--// end row -->
+            </div>
+        </div>
+        <!-- End Work -->
+            
+        <!-- Contact -->
+        <div id="contact">
+            <div class="bg-color-sky-light">
+                <div class="container content-lg">
+                    <div class="row">
+                        <div class="col-sm-3 sm-margin-b-30">
+                            <div class="text-right sm-text-left">
+                                <h2 class="margin-b-0">Contacts</h2>
+                                <p>If you want to get in touch.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-8 col-sm-offset-1">
+                            <div class="row">
+                                <div class="col-md-3 col-xs-6 md-margin-b-30">
+                                    <h5>Location</h5>
+                                    <a href="#">Bangalore, Karnataka , India</a>
+                                </div>
+                                <div class="col-md-3 col-xs-6 md-margin-b-30">
+                                    <h5>Phone</h5>
+                                    <a href="#">+91  7259166750 </a>
+                                </div>
+                                <div class="col-md-3 col-xs-6">
+                                    <h5>Email</h5>
+                                    <a href="mailto:#">prajwalmramesh56@gmail.com</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!--// end row -->
+                </div>
+            </div>
+        </div>
+        <!-- End Contact -->
+        <!--========== END PAGE LAYOUT ==========-->
+
+        <!--========== FOOTER ==========-->
+
+        <!--========== END FOOTER ==========-->
+
+        <!-- Back To Top -->
+        <a href="javascript:void(0);" class="js-back-to-top back-to-top">Top</a>
+
+        <!-- JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+        <!-- CORE PLUGINS -->
+        <script src="vendor/jquery.min.js" type="text/javascript"></script>
+        <script src="vendor/jquery-migrate.min.js" type="text/javascript"></script>
+        <script src="vendor/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+
+        <!-- PAGE LEVEL PLUGINS -->
+        <script src="vendor/jquery.easing.js" type="text/javascript"></script>
+        <script src="vendor/jquery.back-to-top.js" type="text/javascript"></script>
+        <script src="vendor/jquery.smooth-scroll.js" type="text/javascript"></script>
+        <script src="vendor/jquery.wow.min.js" type="text/javascript"></script>
+        <script src="vendor/jquery.parallax.min.js" type="text/javascript"></script>
+        <script src="vendor/jquery.appear.js" type="text/javascript"></script>
+        <script src="vendor/masonry/jquery.masonry.pkgd.min.js" type="text/javascript"></script>
+        <script src="vendor/masonry/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+
+        <!-- PAGE LEVEL SCRIPTS -->
+        <script src="js/layout.min.js" type="text/javascript"></script>
+        <script src="js/components/progress-bar.min.js" type="text/javascript"></script>
+        <script src="js/components/masonry.min.js" type="text/javascript"></script>
+        <script src="js/components/wow.min.js" type="text/javascript"></script>
+
+    </body>
+    <!-- END BODY -->
+</html>
