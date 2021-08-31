@@ -1,3 +1,3 @@
 # prajwalMR.github.io
 
-visit http://prajwalmr.ml
+visit http://prajwalmr.github.io
